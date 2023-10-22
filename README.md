@@ -4,7 +4,7 @@ A Music player website.
 ## Abstract
 This is music player web application with an elegant user interface. This music player offers an immersive audio experience for users, with a sleek design that includes a navigation bar, song list, progress bar, play/pause buttons, and song information. It enables users to effortlessly control their music, featuring options for playing, pausing, and seeking within songs. Users can select songs from a list with cover images and titles, making song selection intuitive. Additionally, the player supports two looping modes: sequential and random playback, providing variety for users. A volume control slider ensures that users can adjust audio levels to their preference. The code is also designed with responsiveness in mind, adapting seamlessly to various screen sizes for a consistent user experience. With subtle yet engaging animations, the music player combines functionality and aesthetics to create an enjoyable and visually appealing way for users to listen to their favorite tunes.
 ### 
-The website is a music player interface with a collection of songs. It features a navigation bar with options for "Home" and "About."
+It features a navigation bar with options for "Home" and "About."
  The main content of the website includes a list of songs with song names, play buttons, and song posters. Users can scroll through the song list.
  Users can play, pause, and control the volume of the music and additionally animations are applied to currently playing music. <br>
 
