@@ -1,0 +1,544 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgb(227, 227, 215);
+    overflow: hidden;
+    transition:all 2s ease-in;
+}
+
+
+nav{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.navbar-brand:hover{
+    transform: scale(1.03);
+    color: #63bfdd;
+}
+
+nav .outer{
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    height: 8vh;
+    background-color: rgb(41, 37, 37);
+    color: white;
+    /* justify-content: space-between; */
+}
+
+nav div {
+    padding: 0 12px;
+    position: static;
+}
+
+
+.brand{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    font: 1.7rem;
+}
+
+.brand-img{
+    width: 50px;
+    border-radius: 30px;
+    padding: 0 8px;
+    margin-bottom: 4px;
+}
+
+.intro{
+    margin-top: 15px;
+    margin-right: 20px;
+    font-size:x-large;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.smlinks{
+    padding-left: 20px;
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.socialmedia{
+    margin: 0 7px;
+    height: 20px;
+    width: 20px;
+    border-radius: 4px;
+}
+
+.main-container{
+    min-height: 75vh;
+    /* background-color: rgb(254, 88, 88); */
+    color: white;
+    font-family:Arial, Helvetica, sans-serif;
+    display: flex;
+    width: 70%;
+    margin: 19px auto;
+    border-radius: 15px;
+    padding: 19px;
+    background-image: url("./logos/pine1.jpg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position:center;
+
+}
+
+.instruction{
+    padding-top: 10px;
+    text-align: center;
+    font-weight: bolder;
+    background-color: transparent;
+}
+
+.bottom{
+    width: 100vw;
+    position: sticky;
+    height: 11vh;
+    background-color: rgb(32, 32, 29);
+    color: white;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.icons i{
+    cursor: pointer;
+    margin: 6px;
+}
+
+#myProgressBar{
+    cursor: pointer;
+    width: 60vw;
+}
+
+.individual-song{
+    font-size: large;
+    margin: 5px 15px;
+}
+
+.songList{
+    width: 35vw;
+    /* background-color: rgb(136, 147, 155); */
+}
+
+.songItemContainer{
+    margin-top: 25px;
+    height: 58vh;
+    overflow-y: auto;
+    margin-bottom: 3px;
+}
+
+.songItem {
+    height: 50px;
+    display: flex;
+    background-color: rgb(255, 236, 236);
+    width: 96%;
+    color: black;
+    margin-top: 12px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+}
+.songItem img{
+    width: 40px;
+    margin: 0 20px;
+    border-radius: 7px;
+}
+
+.songInfo{
+    position: absolute;
+    left: 10vw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.songInfo img{
+    padding-right: 10px;
+    opacity: 0;
+    transition: opacity 1s ease-in;
+}
+
+.play{
+    margin: 0 20px;
+    cursor: pointer;
+}
+
+#muted,#unmuted{
+    height: 26px;
+    width: 26px;
+    border-radius: 6px;
+    margin: 0 5px 0 12px;
+}
+
+#muted{
+    display: none;
+}
+
+#shuffleButton,#loopButton{
+    height: 30px;
+    width: 47px;
+    margin-bottom: 16px;
+    /* top: 1px; */
+    padding-left: 12px;
+}
+
+#loopButton {
+    display: none;
+}
+
+#singleLoop{
+    height: 30px;
+    width: 36px;
+    margin-bottom: 16px;
+    margin-left: 11px;
+}
+
+#singleLoop{
+    background-color: white;
+    display: none;
+}
+
+#volumeButton{
+    width: 7vw;margin-top:3px;
+}
+
+/* Media Quieries */
+
+@media screen and (max-height:510px){
+    .main-container{
+        height: 45vh;
+    }
+    .songItemContainer{
+        height: 53vh;
+    }
+    .bottom{
+        height: 16vh;
+    }
+    .instruction{
+        display: none;
+    }
+    .title-name{
+        font-size: small;
+    }
+}   
+
+@media screen and (max-height:590px){
+    .main-container{
+        height: 45vh;
+    }
+    .songItemContainer{
+        height: 53vh;
+    }
+    .bottom{
+        height: 16vh;
+    }
+    .instruction{
+        display: none;
+    }
+}
+
+@media screen and (min-height:590px)and (max-height:650px){
+    .main-container{
+        height: 50vh;
+    }
+    .songItemContainer{
+        height: 56vh;
+    }
+    .bottom{
+        height: 13vh;
+    }
+}
+
+@media screen and (max-width:430px) {
+    .main-container{
+        width: 95%;
+        padding: 7px;
+    }
+    .songList {
+        padding: 0;
+        margin: 0;
+        width: 100vw;
+        border-radius: 5px;
+    }
+    .songItem{
+        background-color: rgb(254, 121, 121);
+    }
+    .songName{
+        font-size: small;
+    }
+    .songInfo{
+        display: none;
+    }
+    .author{
+        display: none;
+    }
+    #volumeButton{
+        width: 11vw;
+    }
+    .bottom{
+        height: 13vh;
+    }
+    #myProgressBar{
+        width: 55vw;
+    }
+}
+
+@media screen and (min-width:430px) and (max-width:550px) {
+    .main-container{
+        width: 90%;
+    }
+    .songList {
+        width: 80vw;
+        border-radius: 5px;
+    }
+    .songItem{
+        background-color: rgb(249, 252, 255);
+    }
+    .songInfo{
+        left: 0;
+    }
+    .author{
+        /* font-size:small; */
+        display: none;
+    }
+    #volumeButton{
+        width: 11vw;
+    }
+    #gifSong{
+        display: none;
+    }
+}
+
+@media screen and (min-width:550px) and (max-width:750px) {
+    .main-container{
+        width: 80%;
+    }
+    .songList {
+        width: 65vw;
+        border-radius: 5px;
+    }
+    .songItem{
+        background-color: rgb(241, 227, 253);
+    }
+    .songInfo{
+        left: 0;
+    }
+    .author{
+        font-size:small;
+    }
+    #volumeButton{
+        width: 10vw;
+    }
+    #gifSong{
+        font-size:xx-small;
+    }
+}
+
+@media screen and (min-width:750px) and (max-width:900px) {
+    .songList {
+        width: 55vw;
+        border-radius: 5px;
+    }
+    .songInfo{
+        left: 0;
+    }
+    .songItem{
+        background-color: rgb(255, 223, 180);
+    }
+    #volumeButton{
+        width: 9vw;
+    }
+    #gifSong{
+        font-size:xx-small;
+    }
+}
+
+@media screen and (min-width:900px) and (max-width:1100px) {
+    .songList {
+        width: 45vw;
+        border-radius: 5px;
+    }
+    .songItem{
+        background-color: rgb(255, 187, 239);
+    }
+    #gifSong{
+        font-size:small;
+    }
+}
+
+@media screen and (min-width:1100px) and (max-width:1200px) {
+    .songList {
+        width: 40vw;
+        border-radius: 5px;
+    }
+    
+}
+
+/* animation changes */
+@import url("https://fonts.googleapis.com/css?family=Lato:300");
+
+.brand-img{
+    transition: all ease-in-out, 3s;
+}
+
+.brand-img:hover{
+    transform: translate(90px,55px) scale(3);
+}
+
+.socialmedia{
+    transition: hover 1s ease-in, 1s;
+}
+
+.socialmedia:hover{
+    transform: scale(1.8);
+}
+
+.visible{
+  --border-width: 10px;
+  position: relative;
+  border-radius: var(--border-width);
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: calc(-1 * var(--border-width));
+    left: calc(-1 * var(--border-width));
+    z-index: -1;
+    width: calc(100% + var(--border-width) * 2);
+    height: calc(100% + var(--border-width) * 2);
+    background: linear-gradient(
+      60deg,
+      hsl(224, 100%, 65%),
+      hsl(269, 85%, 66%),
+      hsl(314, 85%, 66%),
+      hsl(359, 85%, 66%),
+      hsl(44, 85%, 66%),
+      hsl(65, 98%, 79%),
+      hsl(134, 85%, 66%),
+      hsl(179, 85%, 66%)
+    );
+    background-size: 300% 300%;
+    background-position: 0 50%;
+    border-radius: calc(2 * var(--border-width));
+    animation: moveGradient 8s alternate infinite;
+  }
+}
+
+@keyframes moveGradient {
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+
+.songImage{
+    cursor: pointer;
+    transition: all 1s ease-in-out, 1s;
+}
+
+.songImage:hover{
+    transform: scale(1.7);    
+}
+
+.fa-play-circle{
+    transition: all 1s ease-in-out, 80ms;
+}
+
+.fa-play-circle:hover{
+    transform: scale(1.25);
+}
+
+/*Making Pause button Animation */
+
+.songItem .fa-pause-circle{
+    /* transition : all 2s ease-in; */
+    animation: animate 3s ease-in 0ms infinite;
+    pointer-events:none;
+}
+
+
+@keyframes animate{
+    0%{
+        background-color: #A414D9;
+        transform: scale(1);
+    }
+    25%{
+        background-color: #FF802B;
+    }
+    50%{
+        background-color: #F9E105;
+        transform: scale(0.7);
+        opacity: 0.6;
+    }
+    75%{
+        background-color: #34C7A5;
+    }
+    100%{
+        background-color: #5D50CE;
+        transform: scale(1);
+    }
+}
+
+
+/* changes */
+.songItem:hover{
+    box-shadow: 0px 2px 2px 0px rgba(255, 175, 56, 0.7),
+    2px 3px 4px 0px rgba(255, 175, 56, 0.7),
+    3px 5px 8px 0px rgba(255, 175, 56, 0.7),
+    15px 8px 16px 0px rgba(255, 175, 56, 0.7);
+}
+
+.title-name {
+    line-height: 1.2em;
+    color: white;
+    text-shadow: 
+      0 0 white, 
+      0 1.2em #1095c1;
+    overflow: hidden;
+    transition: .9s;
+}
+
+.title-name:hover {
+    color:rgba(255, 175, 56, 0.7);
+    text-shadow: 
+      0 -1.2em #000, 
+      0 0 rgba(255, 175, 56, 0.7);
+}
+
+@media screen and (min-width:900px) {
+    .songName {
+        --c: #1095c1; /* the color  */
+        --h: 1.2em;   /* the height */
+        
+        line-height: var(--h);  
+        color: black;
+        overflow: hidden;
+        text-shadow: 
+          0 calc(-1*var(--h)*var(--_i,0)) var(--c), 
+          0 calc(var(--h)*(1 - var(--_i,0))) #1095c1;
+        background: 
+          linear-gradient(var(--c) 0 0) no-repeat
+          calc(200% - var(--_i, 0) * 100%) 100% / 200% calc(100% * var(--_i, 0) + .08em);
+        transition: .4s calc(var(--_i, 0) * .4s), background-position .4s calc(.4s - calc(var(--_i, 0) * .4s));
+      }
+      .songName:hover {
+        --_i: 1;
+      }
+}
+
+
+/* For Beginning animation */
+/* This does not support on some browsers - Try using it in different browers */
+
+/* @starting-style{
+    body{
+        opacity: 0;
+        transform:translateX(-20px);
+    }
+} */
